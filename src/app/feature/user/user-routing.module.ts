@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SecurityGuard } from '@core/guard/security.guard';
+import { SecurityGuard } from 'src/app/guard/security.guard';
 import { Role } from '@shared/role/model/Role';
 import { UserComponent } from './component/user.component';
 

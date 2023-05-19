@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SecurityGuard } from '@core/guard/security.guard';
+import { SecurityGuard } from 'src/app/guard/security.guard';
 import { Role } from '@shared/role/model/Role';
 import { AddVehicleComponent } from './component/add-vehicle/add-vehicle.component';
 import { ListVehiclesComponent } from './component/list-vehicles/list-vehicles.component';
@@ -14,13 +14,13 @@ const routes: Routes = [
       {path: '', pathMatch: 'full', redirectTo: '/vehicle/list'},
       {
         path: 'add',
-        component: AddVehicleComponent, 
+        component: AddVehicleComponent,
         canActivate: [SecurityGuard],
         data: { rolesEsperados: [ Role.ADMINISTRADOR, Role.ESTUDIANTE ]}
       },
       {
         path: 'list',
-        component: ListVehiclesComponent, 
+        component: ListVehiclesComponent,
         canActivate: [SecurityGuard],
         data: { rolesEsperados: [ Role.ADMINISTRADOR, Role.ESTUDIANTE ]}
       }
