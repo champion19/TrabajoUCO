@@ -3,20 +3,18 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from '../core/material.module';
-import { MenuComponent } from './menu/component/menu.component';
-import { NavbarComponent } from './navbar/component/navbar.component';
+import { HeaderComponent } from '../presentation/components/header/header.component';
+
 
 @NgModule({
   declarations: [
-    MenuComponent,
-    NavbarComponent
+    HeaderComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    MaterialModule,
+
     RouterModule
   ],
   exports: [
@@ -24,9 +22,7 @@ import { NavbarComponent } from './navbar/component/navbar.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MaterialModule,
-    MenuComponent,
-    NavbarComponent
+
   ],
   providers: []
 })
